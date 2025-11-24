@@ -1,0 +1,360 @@
+@use '../abstracts';
+@use '../variables';
+
+form {
+    padding: 5vh 5vw 10vh;
+    background-color: #fff;
+    // max-width: 800px;
+    margin-inline: auto;
+
+    @include abstracts.lg {
+        margin-block: 5vh;
+        width: 80vw;
+        border-radius: abstracts.$border-radius-md;
+    }
+
+    fieldset {
+        width: 100%;
+        margin: 5vh auto 10vh;
+        padding: 0.5rem;
+        height: auto;
+        overflow-y: auto;
+
+        background-color: #fff;
+        border: 1px solid abstracts.$overlay-blue-dark;
+        border-radius: abstracts.$border-radius-md;
+        
+        transition: 500ms;
+        position: relative;
+        isolation: isolate;
+        
+        // LAST FIELDSET MARGIN-BOTTOM TO SEND BUTTON
+        &:last-of-type {
+            margin-bottom: 5vh;
+        }
+
+        @include abstracts.md {
+            padding: 1rem;
+            max-width: 600px;
+        }
+        @include abstracts.md {
+            // padding: 0 20vw;
+        }
+
+        .field-text {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .field-btn {
+            position: absolute;
+            right: .5em;
+            top: 0;
+            display: block;
+            width: 3em;
+            padding: .8em 2em;
+            border-radius: 15px;
+
+            // border: 1px solid green;
+            &::after,
+            &::before {
+                position: absolute;
+                display: grid;
+                place-items: center;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+            }
+
+            &::before {
+                content: 'open';
+            }
+
+            &::after {
+                content: 'close';
+                opacity: 0;
+            }
+
+            // button active
+            &.active {
+                &::before {
+                    opacity: 0;
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+
+
+        .input-div {
+            width: 100%;
+
+            label {
+                margin-top: .5em;
+            }
+
+            input {
+                text-overflow: ellipsis;
+            }
+        }
+
+        // FIELDSET HOVER CLASS
+        // &:hover {
+        //     scale: 1;
+        // }
+
+    }
+
+    legend {
+        margin: 0 auto;
+        padding: 0.25rem;
+
+        font-size: abstracts.$font-clamp-sm;
+        text-transform: capitalize;
+
+        background: abstracts.$overlay-blue-darker;
+        color: abstracts.$text-light;
+
+        border-radius: abstracts.$border-radius-sm;
+        border: 1px solid #333a;
+
+        cursor: help;
+    }
+
+
+    .radio-field {
+        margin-bottom: 1rem;
+        
+        label {
+            text-transform: capitalize;
+            padding-inline: 0.25rem;
+        }
+
+        input {
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    .input-div {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0 0 1rem 0;
+        padding: .5em .1em;
+        transition: .3s ease;
+        position: relative;
+        color: abstracts.$text-dark;
+        // scale: .97;
+
+        // INFO SECTION
+        .info-section {
+            background-color: abstracts.$overlay-blue-dark;
+            color: abstracts.$text-light;
+            height: 0;
+            padding: 0.125rem;
+            margin: 0.5rem auto 1rem;
+            overflow: hidden;
+            transition: .5s;
+            border-radius: 5px;
+            cursor: help;
+            overscroll-behavior: contain;
+
+            @media (max-width: 768px) {
+                width: 90%;
+            }
+
+            p {
+                padding: 0.75rem;
+                line-height: 1.6;
+            }
+
+            &:hover {
+                height: 50vh;
+                overflow: auto;
+                background-color: abstracts.$overlay-blue-darker;
+
+                // i {
+                //     color: abstracts.$text-brand;
+                //     background-color: abstracts.$background;
+                // }
+            }
+
+            //  ACTIVE CLASS
+            &.active {
+                height: 50vh;
+                overflow: auto;
+
+                i {
+                    // color: abstracts.$text-brand;
+                    // background-color: abstracts.$background;
+                    animation: none;
+                    opacity: .8;
+                }
+            }
+        }
+
+        i {
+            color: #000;
+            background-color: abstracts.$text-brand;
+            border-radius: 50%;
+            position: absolute;
+            top: .5em;
+            right: 0;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: .2s;
+            animation: pulse 2s infinite;
+
+            @keyframes pulse {
+                50% {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        label {
+            // border: 1px solid green;
+            transform: translateY(-.5em);
+            text-transform: capitalize;
+            transition: .2s;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+
+            span {
+                color: #000a;
+                text-transform: lowercase;
+                font-size: abstracts.$font-clamp-xsm;
+            }
+
+        }
+
+        input,
+        textarea {
+            outline: 1px solid #000;
+            outline-offset: -3px;
+            padding: 0.75rem;
+            transition: .3s ease;
+            // background-color: abstracts.$overlay-blue-darker;
+            // color: abstracts.$text-brand;
+            border-radius: 5px;
+            border: none;
+            font-size: abstracts.$font-clamp-sm;
+
+
+            &:focus {
+                outline: 1px dashed lime;
+
+                &::placeholder {
+                    // color: abstracts.$text-brand;
+                    // opacity: 1;
+                }
+            }
+
+            &:invalid {
+
+                // background-color: #161616;
+                // color: abstracts.$text-light;
+                // border: none;
+                outline: 1px dashed abstracts.$span-crimson;
+            }
+        }
+
+        textarea {
+            padding: .5em;
+            font-size: 1.2em;
+
+            &:invalid {
+                // background-color: abstracts.$invalid;
+            }
+        }
+
+        ::placeholder {
+            color: hsl(0, 0%, 64%);
+            color: abstracts.$text-light-trans;
+            text-transform: capitalize;
+            opacity: .5;
+        }
+
+        // services div
+        &.services {
+            input {
+                margin: .5em 0;
+            }
+        }
+
+        // input hover state
+        &:hover {
+            label {
+                transform: translateY(0) translateX(.5em);
+            }
+        }
+    }
+
+    // submit button       
+        #submit-btn {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+    
+            // width: max-content;
+            margin: 0 auto 5vh;
+            padding: 0.75rem;
+    
+    
+            color: abstracts.$text-light;
+            text-transform: uppercase;
+            font-size: abstracts.$font-clamp-sm;
+            font-weight: 500;
+            letter-spacing: .0125em;
+    
+            border: none;
+            border-radius: abstracts.$border-radius-md;
+    
+            position: relative;
+            isolation: isolate;
+            cursor: default;
+            transition: 250ms ease;
+    
+            @include abstracts.sm {
+                cursor: pointer;
+            }
+            @include abstracts.md {
+                justify-content: center;
+                cursor: pointer;
+            }
+    
+            &.btn-bg {
+    
+                background: #5f0315;
+                &::before {
+                    background-image: linear-gradient(0deg, #5f0315, #dc143c);
+                }
+    
+                &::after {
+                    background: #5f0315;
+                }
+    
+            }
+    
+            &:hover {
+                color: abstracts.$text-brand;
+                .icon {
+                        rotate: 30deg;
+                    }
+            }
+
+            &:active {
+                .icon {
+                    rotate: 45deg;
+                }
+            }
+
+        }
+}

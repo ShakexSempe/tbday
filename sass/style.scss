@@ -1,0 +1,100 @@
+@import './abstracts/';
+@import './layout/';
+@import 'features';
+@import 'variables';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10vh;
+}
+
+h1, h2, h3, h4, h5 h6 {
+    text-wrap: balance;
+}
+
+p, li {
+    text-wrap: pretty;
+    font-size: $font-clamp-sm;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: $font-sans;
+    position: relative;
+
+    background-color: $background-light;
+    color: $overlay-blue-darkest;
+}
+
+img {
+        display: block;
+        max-width: 100%;    
+}
+
+.icon {
+        width: 1.025rem;
+        height: 1.025rem;
+        transition: 250ms ease;
+    }
+
+
+#container {
+
+    @include md {
+        padding: 0 5vw;
+    }
+
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    transition: 250ms;
+
+    // background dim when nav open
+    @media (max-width: 768px) {
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $overlay-blue-dark;
+            opacity: 0;
+            transition: 500ms;
+            z-index: -5;
+        }
+
+        &.dim {
+
+            &::after {
+                opacity: .5;
+                z-index: 5;
+            }
+
+        }
+
+    }
+    
+
+    section {
+        border: 2px solid red;
+        padding: 5vh 5vw;
+        max-width: 100%;
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        iframe {
+            margin: 5vh auto;
+            border: 3px solid blue;
+            width: 100%;
+            height: 50vh;
+        }
+    }
+}
