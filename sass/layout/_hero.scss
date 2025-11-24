@@ -10,17 +10,20 @@
     text-align: center;
     background-color: abstracts.$background-gray;
 
-    @include abstracts.md {
-        padding: 0 5vw;
-    }
-
     @include abstracts.lg {
-        padding: 10vh 5vw;
+        padding: 30vh 5vw 0;
+        // border: 2px solid red;/
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        // align-items: center;
+        grid-template-areas: 'content image';
     }
 
 }
 
 .hero-img {
+    grid-area: image;
     display: block;
     margin: 0 auto 5vh;
     width: 100%;
@@ -30,6 +33,10 @@
     border-radius: abstracts.$border-radius-md;
     overflow: hidden;
     position: relative; 
+
+    @include abstracts.md {
+        height: 50vh;
+    }
 
     // OVERLAY 
     &::after {
@@ -60,10 +67,13 @@
 }
 
 .hero-content {
+    grid-area: content;
     padding: 0 5vw 1rem;
 
     @include abstracts.lg {
         padding: 0;
+        text-align: left;
+        // align-self: flex-start;
     }
     
     .hero-title {
@@ -123,11 +133,16 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
-    
+
+    @include abstracts.lg {
+        margin: 1rem 0;
+        justify-content: start;
+    }
 
     a {
         width: max-content;
-        padding: 0.5rem;
+        padding: 0.5rem 2rem;
+        letter-spacing: .15rem;
         border-radius: 0.5rem;
         font-size: abstracts.$font-clamp-sm;
         text-decoration: none;

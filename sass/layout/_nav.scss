@@ -16,7 +16,7 @@
     background-color: abstracts.$overlay-blue-darkest;
     z-index: 10;
 
-    @include abstracts.md {
+    @include abstracts.lg {
         padding: 1.5em 10vw;
     }
 
@@ -105,7 +105,7 @@
         }
         
         // active menu
-        @media (max-width: 768px){
+        @media (max-width: 820px){
             ul {
                 border: 1px solid #fff7;
                 width: 95%;
@@ -163,7 +163,7 @@
     }
 
         // desktop nav-list
-        @include abstracts.md {
+        @include abstracts.lg {
             // display: flex;
             position: relative;
             background-color: #000;
@@ -302,7 +302,7 @@
         }
 
         // HIDE TOGGLE ON DESKTOPS
-        @include abstracts.md {
+        @include abstracts.lg {
             display: none;
         }
     }
