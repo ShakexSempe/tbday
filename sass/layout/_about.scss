@@ -1,0 +1,26 @@
+@use '../abstracts';
+
+.gallery {
+    border: 2px solid red;
+
+    max-width: 100%;
+    padding: 0.5rem;
+    
+    .grid-container {
+        border: 2px solid blue;
+        display: grid;
+        overflow: hidden;
+        // grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-auto-rows: 240px;
+        grid-template-columns: auto auto;
+        background-color: #ddd;
+    }
+
+    img {
+        // border: 2px solid #000;
+        // width: 100%;
+        // height: 100%;
+        // object-fit: cover;
+        // object-position: center;
+    }
+}

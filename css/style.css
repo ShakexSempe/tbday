@@ -162,6 +162,21 @@
   font-weight: 100 1000;
   font-display: swap;
 }
+.gallery {
+  border: 2px solid red;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+.gallery .grid-container {
+  border: 2px solid blue;
+  display: grid;
+  overflow: hidden;
+  grid-auto-rows: 240px;
+  grid-template-columns: auto auto;
+  background-color: #ddd;
+}
+
 footer {
   width: 100%;
   background-color: #15191e;
@@ -762,7 +777,7 @@ form #submit-btn:active .icon {
   position: relative;
   height: 100dvh;
   height: 95vh;
-  padding: 5vh 0vw 0;
+  padding: 10vh 5vw 0;
   text-align: center;
   background-color: #f4f4f4;
 }
