@@ -163,13 +163,12 @@
   font-display: swap;
 }
 .gallery {
-  border: 2px solid red;
+  border: 2px solid #000;
   max-width: 100%;
   padding: 0.5rem;
 }
 
 .gallery .grid-container {
-  border: 2px solid blue;
   display: grid;
   overflow: hidden;
   grid-auto-rows: 240px;
