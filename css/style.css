@@ -232,6 +232,7 @@ footer a {
   background-color: #4e4831;
   background-color: #746A49;
   z-index: 10;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
 }
 
 #nav a {
@@ -683,11 +684,14 @@ form #submit-btn:active .icon {
 .hero {
   background-color: #efefeb;
   background-color: #c3c3b1;
+  background-color: #746A49;
   position: relative;
   color: #4F352C;
   height: 100dvh;
   height: 95vh;
   padding: 10vh 5vw 5vh;
+  overflow: hidden;
+  isolation: isolate;
   text-align: center;
 }
 
@@ -702,41 +706,49 @@ form #submit-btn:active .icon {
 }
 .hero-img {
   grid-area: image;
-  display: block;
-  margin: 0 auto 5vh;
+  position: absolute;
+  top: 0;
+  border: 2px solid blue;
+  overflow: hidden;
   width: 100%;
-  height: 40vh;
-  max-height: 450px;
+  height: 100%;
+  z-index: -1;
+  clip-path: polygon(100% 0, 0% 0%, 100% 100%);
   border-radius: 0.5rem;
   overflow: hidden;
-  position: relative;
 }
 
 @media (min-width: 768px) {
   .hero-img {
+    position: relative;
     height: 50vh;
+    clip-path: unset;
   }
 }
-.hero-img::after {
-  position: absolute;
-  content: "";
-  inset: 0;
-  background: linear-gradient(0deg, #29323c 0%, #485563 100%);
-  background: linear-gradient(90deg, #29323d 30%, transparent, #29323d 70%);
-  opacity: 0.35;
-}
-
 .hero-img img {
   object-fit: cover;
+  object-position: 20% center;
   width: 100%;
   height: 100%;
 }
 
 .hero-content {
   grid-area: content;
-  padding: 0 5vw 1rem;
+  padding: 10vh 0vw 1rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  top: 40vh;
+  position: relative;
+  border: 1px solid #D15F33;
+  text-align: left;
+  background-color: rgba(195, 195, 177, 0.9);
 }
 
+@media (min-width: 768px) {
+  .hero-content {
+    top: unset;
+  }
+}
 @media (min-width: 820px) {
   .hero-content {
     padding: 0;
@@ -785,7 +797,7 @@ form #submit-btn:active .icon {
 
 .hero-cta-btns {
   width: 100%;
-  margin: 1.5rem auto;
+  margin: 1.5rem auto 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

@@ -9,6 +9,7 @@ form {
 
     @include abstracts.lg {
         margin-block: 5vh;
+        // padding: 10vh 10vw;
         width: 80vw;
         border-radius: abstracts.$border-radius-md;
     }
