@@ -20,10 +20,10 @@ form {
         height: auto;
         overflow-y: auto;
 
-        background-color: #fff;
+        
         background-color: #fafafa;
-        border: 1px solid abstracts.$overlay-blue-dark;
         border-radius: abstracts.$border-radius-md;
+        border: 1px solid abstracts.$background-navbar;
         
         transition: 500ms;
         position: relative;
@@ -38,57 +38,29 @@ form {
             padding: 1rem;
             max-width: 600px;
         }
-        @include abstracts.md {
-            // padding: 0 20vw;
-        }
+
+        legend {
+        margin: 0 auto;
+        padding: 0.25rem 1rem;
+
+        font-size: abstracts.$font-clamp-sm;
+        text-transform: capitalize;
+
+        background: abstracts.$background-navbar;
+        color: abstracts.$text-light;
+
+        border-radius: abstracts.$border-radius-sm;
+        border: 1px solid abstracts.$background-navbar;
+
+        cursor: help;
+    }
+
 
         .field-text {
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
-        .field-btn {
-            position: absolute;
-            right: .5em;
-            top: 0;
-            display: block;
-            width: 3em;
-            padding: .8em 2em;
-            border-radius: 15px;
-
-            // border: 1px solid green;
-            &::after,
-            &::before {
-                position: absolute;
-                display: grid;
-                place-items: center;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border-radius: 5px;
-            }
-
-            &::before {
-                content: 'open';
-            }
-
-            &::after {
-                content: 'close';
-                opacity: 0;
-            }
-
-            // button active
-            &.active {
-                &::before {
-                    opacity: 0;
-                }
-
-                &::after {
-                    opacity: 1;
-                }
-            }
-        }
 
 
         .input-div {
@@ -103,43 +75,9 @@ form {
             }
         }
 
-        // FIELDSET HOVER CLASS
-        // &:hover {
-        //     scale: 1;
-        // }
-
     }
 
-    legend {
-        margin: 0 auto;
-        padding: 0.25rem 1rem;
-
-        font-size: abstracts.$font-clamp-sm;
-        text-transform: capitalize;
-
-        background: abstracts.$background-dark;
-        color: abstracts.$text-light;
-
-        border-radius: abstracts.$border-radius-sm;
-        border: 1px solid #333a;
-
-        cursor: help;
-    }
-
-
-    .radio-field {
-        margin-bottom: 1rem;
-        
-        label {
-            text-transform: capitalize;
-            padding-inline: 0.25rem;
-        }
-
-        input {
-            margin-bottom: 1rem;
-        }
-
-    }
+    
 
     .input-div {
         display: flex;
@@ -213,7 +151,7 @@ form {
 
         ::placeholder {
             color: hsl(0, 0%, 64%);
-            color: abstracts.$text-light-trans;
+            // color: abstracts.$text-light-trans;
             text-transform: capitalize;
             opacity: .5;
         }

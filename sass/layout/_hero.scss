@@ -10,9 +10,10 @@
 
     height: 100dvh;
     height: 95vh;
-    padding: 10vh 5vw 0;
+    padding: 10vh 5vw 5vh;
     
     text-align: center;
+
 
     @include abstracts.lg {
         padding: 30vh 5vw 0;
