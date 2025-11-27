@@ -1,13 +1,22 @@
 // BACKGROUND COLORS
 $background-light: #fff;
-$background-gray: #f4f4f4;
-$background-dark: #333;
+// $background-main: #f4eadf;
+// $background-main: #746A49;
+$background-main: #c3c3b1;
+$background-gray: hsl(60, 13%, 93%);
+$background-dark: hsl(46, 23%, 25%);
+$background-darker: hsl(46, 23%, 15%);
+$background-navbar: #746A49;
 $background-light: #fff000;
 $background-light: #f4f4f4;
 $brand-overlay: #a6b2bf;
 
 // TEXT COLORS
-$text-brand: skyblue;
+$text-brand: #4F352C;
+$text-main: #000;
+$text-link: #D15F33;
+$text-nav: hsl(42, 48%, 90%);
+$nav-toggle: hsl(42, 48%, 90%);
 $text-black: #000;
 $text-dark: #000;
 $text-white: #fff;
@@ -22,6 +31,7 @@ $border-light-hover: yellow;
 $overlay-border-light: hsl(211, 16%, 85%);
 
 // BUTTON COLORS
+$cta-btn: #D15F33;
 $btn-secondary: hsl(0, 0%, 100%);
 
 

@@ -23,7 +23,7 @@
 }
 
 .btn-bg::before {
-  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15), inset 0.15rem 0.15rem 0.15rem #fff4;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15), inset 0.15rem 0.15rem 0.15rem rgba(255, 255, 255, 0.15);
 }
 
 .btn-bg::after {
@@ -62,7 +62,7 @@
   right: 0.25rem;
   width: 1rem;
   height: 1rem;
-  border: 3px solid #29323d;
+  border: 3px solid #2f2b1d;
   border-right-color: #0001;
   border-bottom-color: #0001;
   rotate: 45deg;
@@ -104,7 +104,7 @@
 }
 
 .btn-bg::before {
-  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15), inset 0.15rem 0.15rem 0.15rem #fff4;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15), inset 0.15rem 0.15rem 0.15rem rgba(255, 255, 255, 0.15);
 }
 
 .btn-bg::after {
@@ -143,7 +143,7 @@
   right: 0.25rem;
   width: 1rem;
   height: 1rem;
-  border: 3px solid #29323d;
+  border: 3px solid #2f2b1d;
   border-right-color: #0001;
   border-bottom-color: #0001;
   rotate: 45deg;
@@ -178,7 +178,7 @@
 
 footer {
   width: 100%;
-  background-color: #15191e;
+  background-color: #4e4831;
   color: #f4f4f4;
   text-align: center;
   display: flex;
@@ -204,7 +204,7 @@ footer .footer-div ul {
 }
 
 footer .copyright {
-  background-color: #1f252d;
+  background-color: #2f2b1d;
 }
 
 footer p {
@@ -213,7 +213,7 @@ footer p {
 }
 
 footer a {
-  color: skyblue;
+  color: #D15F33;
   text-decoration: none;
   position: relative;
 }
@@ -228,7 +228,15 @@ footer a {
   justify-content: space-between;
   align-items: center;
   background-color: #15191e;
+  background-color: #746A49;
+  background-color: #746A49;
   z-index: 10;
+}
+
+#nav a {
+  color: #C3A356;
+  color: #f2ead9;
+  color: #f2ead9;
 }
 
 @media (min-width: 820px) {
@@ -249,7 +257,6 @@ footer a {
   font-size: clamp(.95rem, 1.5vw, 1rem);
   width: max-content;
   padding: 0.125rem 0.5rem;
-  color: #f4f4f4;
   border: 1px solid;
   border-right-color: transparent;
   border-left-color: transparent;
@@ -265,7 +272,7 @@ footer a {
 
 #nav .brand a:active {
   transform: scale(0.95);
-  color: skyblue;
+  color: #4F352C;
 }
 
 @media (min-width: 576px) {
@@ -279,6 +286,7 @@ footer a {
 }
 #nav .nav-list {
   background-color: #1f252d;
+  background-color: #4e4831;
   color: #f4f4f4;
   width: 100%;
   min-height: 100vh;
@@ -309,10 +317,6 @@ footer a {
   cursor: default;
 }
 
-#nav .nav-list ul li a:hover {
-  color: skyblue;
-}
-
 @media (max-width: 820px) {
   #nav .nav-list ul {
     border: 1px solid #fff7;
@@ -331,6 +335,7 @@ footer a {
   #nav .nav-list ul li {
     align-items: center;
     background: #475462;
+    background: #746A49;
     border-radius: 0.5rem;
     padding-inline: 0.25rem;
     margin: 0;
@@ -404,7 +409,6 @@ footer a {
   }
 }
 .details {
-  color: #f4f4f4;
   text-transform: uppercase;
   font-size: clamp(.95rem, 1.5vw, 1rem);
   text-decoration: none;
@@ -430,7 +434,7 @@ footer a {
   width: 60%;
   width: 100%;
   height: 2px;
-  background-color: #f0f2f5;
+  background-color: #f2ead9;
   transition: 0.3s;
 }
 
@@ -479,7 +483,7 @@ footer a {
 }
 form {
   padding: 5vh 5vw 10vh;
-  background-color: #fff;
+  background-color: #efefeb;
   margin-inline: auto;
 }
 
@@ -497,6 +501,7 @@ form fieldset {
   height: auto;
   overflow-y: auto;
   background-color: #fff;
+  background-color: #fafafa;
   border: 1px solid #29323d;
   border-radius: 0.5rem;
   transition: 500ms;
@@ -571,10 +576,10 @@ form fieldset .input-div input {
 
 form legend {
   margin: 0 auto;
-  padding: 0.25rem;
+  padding: 0.25rem 1rem;
   font-size: clamp(1rem, 2vw, 1.025rem);
   text-transform: capitalize;
-  background: #1f252d;
+  background: #4e4831;
   color: #f4f4f4;
   border-radius: 0.25rem;
   border: 1px solid #333a;
@@ -604,63 +609,6 @@ form .input-div {
   color: #000;
 }
 
-form .input-div .info-section {
-  background-color: #29323d;
-  color: #f4f4f4;
-  height: 0;
-  padding: 0.125rem;
-  margin: 0.5rem auto 1rem;
-  overflow: hidden;
-  transition: 0.5s;
-  border-radius: 5px;
-  cursor: help;
-  overscroll-behavior: contain;
-}
-
-@media (max-width: 768px) {
-  form .input-div .info-section {
-    width: 90%;
-  }
-}
-form .input-div .info-section p {
-  padding: 0.75rem;
-  line-height: 1.6;
-}
-
-form .input-div .info-section:hover {
-  height: 50vh;
-  overflow: auto;
-  background-color: #1f252d;
-}
-
-form .input-div .info-section.active {
-  height: 50vh;
-  overflow: auto;
-}
-
-form .input-div .info-section.active i {
-  animation: none;
-  opacity: 0.8;
-}
-
-form .input-div i {
-  color: #000;
-  background-color: skyblue;
-  border-radius: 50%;
-  position: absolute;
-  top: 0.5em;
-  right: 0;
-  font-size: 1.5em;
-  cursor: pointer;
-  transition: 0.2s;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  50% {
-    transform: scale(1.2);
-  }
-}
 form .input-div label {
   transform: translateY(-0.5em);
   text-transform: capitalize;
@@ -695,7 +643,7 @@ form .input-div textarea:focus {
 
 form .input-div input:invalid,
 form .input-div textarea:invalid {
-  outline: 1px dashed #bb1133;
+  outline: 1px dashed #D15F33;
 }
 
 form .input-div textarea {
@@ -753,15 +701,15 @@ form #submit-btn.btn-bg {
 }
 
 form #submit-btn.btn-bg::before {
-  background-image: linear-gradient(0deg, #5f0315, #dc143c);
+  background: linear-gradient(#d87a55, #D15F33);
 }
 
 form #submit-btn.btn-bg::after {
-  background: #5f0315;
+  background: #D15F33;
 }
 
 form #submit-btn:hover {
-  color: skyblue;
+  color: #4F352C;
 }
 
 form #submit-btn:hover .icon {
@@ -773,12 +721,14 @@ form #submit-btn:active .icon {
 }
 
 .hero {
+  background-color: #efefeb;
+  background-color: #c3c3b1;
   position: relative;
+  color: #4F352C;
   height: 100dvh;
   height: 95vh;
   padding: 10vh 5vw 0;
   text-align: center;
-  background-color: #f4f4f4;
 }
 
 @media (min-width: 820px) {
@@ -834,7 +784,6 @@ form #submit-btn:active .icon {
   }
 }
 .hero-content .hero-title {
-  margin-bottom: 1rem;
   max-width: 800px;
   margin-inline: auto;
 }
@@ -850,7 +799,7 @@ form #submit-btn:active .icon {
 }
 
 .hero-content .hero-title h2 {
-  color: #475462;
+  margin-bottom: 0.25rem;
   font-size: clamp(1.15rem, 2.5vw, 1.5rem);
   font-weight: 500;
 }
@@ -860,7 +809,7 @@ form #submit-btn:active .icon {
 }
 
 .hero-content p {
-  margin: 1.5rem 0;
+  margin: 1rem 0 0;
   position: relative;
 }
 
@@ -870,7 +819,7 @@ form #submit-btn:active .icon {
 }
 
 .hero-content p a:hover {
-  color: skyblue;
+  color: #4F352C;
   text-decoration: none;
 }
 
@@ -890,28 +839,23 @@ form #submit-btn:active .icon {
   }
 }
 .hero-cta-btns a {
+  color: #f4f4f4;
+  background: #D15F33;
+  background: #c3a356;
+  background: #D15F33;
+  background: linear-gradient(#d87a55, #D15F33);
   width: max-content;
   padding: 0.5rem 2rem;
-  letter-spacing: 0.15rem;
   border-radius: 0.5rem;
   font-size: clamp(1rem, 2vw, 1.025rem);
+  font-weight: 600;
   text-decoration: none;
   text-transform: capitalize;
-  color: #f4f4f4;
-  background: #1f252d;
-}
-
-.hero-cta-btns a.btn-secondary {
-  background: white;
-  color: #000;
-}
-
-.hero-cta-btns a::before {
-  background: linear-gradient(0deg, #15191e, #29323d, #15191e);
+  letter-spacing: 0.15rem;
 }
 
 .hero-cta-btns a:hover, .hero-cta-btns a:focus {
-  color: skyblue;
+  color: #4F352C;
 }
 
 .btn-bg {
@@ -937,7 +881,7 @@ form #submit-btn:active .icon {
 }
 
 .btn-bg::before {
-  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15), inset 0.15rem 0.15rem 0.15rem #fff4;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15), inset 0.15rem 0.15rem 0.15rem rgba(255, 255, 255, 0.15);
 }
 
 .btn-bg::after {
@@ -976,7 +920,7 @@ form #submit-btn:active .icon {
   right: 0.25rem;
   width: 1rem;
   height: 1rem;
-  border: 3px solid #29323d;
+  border: 3px solid #2f2b1d;
   border-right-color: #0001;
   border-bottom-color: #0001;
   rotate: 45deg;
@@ -1093,6 +1037,7 @@ h1, h2, h3, h4, h5 h6 {
 p, li {
   text-wrap: pretty;
   font-size: clamp(1rem, 2vw, 1.025rem);
+  line-height: 1.6;
 }
 
 body {
@@ -1100,8 +1045,9 @@ body {
   overflow-x: hidden;
   font-family: "Open Sans", sans-serif;
   position: relative;
-  background-color: #f4f4f4;
+  background-color: #c3c3b1;
   color: #15191e;
+  color: #4F352C;
 }
 
 img {
@@ -1145,16 +1091,27 @@ img {
   }
 }
 #container section {
-  border: 2px solid red;
   padding: 5vh 5vw;
   max-width: 100%;
 }
 #container section h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+#container section article {
+  border-radius: 0.25rem;
+  background: #efefeb;
+  padding: 0.5rem;
+}
+#container section article p {
+  margin-top: 0.5rem;
+}
+#container section article p::first-letter {
+  text-transform: capitalize;
 }
 #container section iframe {
   margin: 5vh auto;
-  border: 3px solid blue;
+  border-radius: 0.5rem;
+  border: 1px solid #4F352C;
   width: 100%;
   height: 50vh;
 }

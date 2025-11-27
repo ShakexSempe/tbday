@@ -2,13 +2,17 @@
 
 .hero {
     // border: 2px solid green;
+    background-color: abstracts.$background-gray;
+    background-color: abstracts.$background-main;
     position: relative;
+
+    color: abstracts.$text-brand;
+
     height: 100dvh;
     height: 95vh;
     padding: 10vh 5vw 0;
-    // display: grid;
+    
     text-align: center;
-    background-color: abstracts.$background-gray;
 
     @include abstracts.lg {
         padding: 30vh 5vw 0;
@@ -77,7 +81,7 @@
     }
     
     .hero-title {
-        margin-bottom: 1rem;
+        // margin-bottom: 1rem;
         max-width: 800px;
         margin-inline: auto;
         
@@ -95,12 +99,12 @@
         }
     
         h2 {
-            
+            margin-bottom: 0.25rem;
             &::first-letter {
                 text-transform: capitalize;
             }
 
-            color: abstracts.$overlay-blue-light;
+            // color: abstracts.$overlay-blue-light;
             font-size: abstracts.$font-clamp-md;
             font-weight: 500;
         }
@@ -108,8 +112,9 @@
     }
 
     p {
-        margin: 1.5rem 0;
+        margin: 1rem 0 0;
         position: relative;
+        
         a {
             color: abstracts.$text-dark;
             transition: .2s;
@@ -140,28 +145,29 @@
     }
 
     a {
+        color: abstracts.$text-light;
+        // color: #C3A356;
+        background: abstracts.$cta-btn;
+        background: #c3a356;
+        background: #D15F33;
+        background: linear-gradient(hsl(17, 63%, 59%), #D15F33);
+
         width: max-content;
         padding: 0.5rem 2rem;
-        letter-spacing: .15rem;
         border-radius: 0.5rem;
+        
         font-size: abstracts.$font-clamp-sm;
+        font-weight: 600;
         text-decoration: none;
         text-transform: capitalize;
-        color: abstracts.$text-light;
-        background: abstracts.$overlay-blue-darker;
-
-        &.btn-secondary {
-            // background-color: abstracts.$overlay-blue-light;
-            background: abstracts.$btn-secondary;
-            color: abstracts.$text-dark;
-        }
+        letter-spacing: .15rem;
         
-        &::before {
-            background: linear-gradient(0deg, abstracts.$overlay-blue-darkest,
-                                            abstracts.$overlay-blue-dark, 
-                                            abstracts.$overlay-blue-darkest);
+        // &::before {
+        //     background: linear-gradient(0deg, abstracts.$overlay-blue-darkest,
+        //                                     abstracts.$overlay-blue-dark, 
+        //                                     abstracts.$overlay-blue-darkest);
         
-        }
+        // }
 
         &:hover, &:focus {
         color: abstracts.$text-brand;

@@ -3,7 +3,7 @@
 
 footer {
     width: 100%;
-    background-color: abstracts.$overlay-blue-darkest;
+    background-color: abstracts.$background-dark;
     color: abstracts.$text-light;
     text-align: center;
     display: flex;
@@ -27,7 +27,7 @@ footer {
         }
     }
     .copyright {
-        background-color: abstracts.$overlay-blue-darker;
+        background-color: abstracts.$background-darker;
     }
     
     p {
@@ -36,7 +36,7 @@ footer {
     }
 
     a {
-        color: abstracts.$text-brand;
+        color: abstracts.$text-link;
         text-decoration: none;
         position: relative;
     }
