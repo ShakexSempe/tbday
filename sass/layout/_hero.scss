@@ -9,73 +9,66 @@
 
     color: abstracts.$text-brand;
 
+    // width: 90vw;
     height: 100dvh;
     height: 95vh;
-    padding: 10vh 5vw 5vh;
+    // padding: 10vh 5vw 5vh;
     
-    overflow: hidden;
+    // overflow: hidden;
     isolation: isolate;
     text-align: center;
 
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     bottom: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: abstracts.$background-gray;
-    //     translate: 30% 50%;
-    //     opacity: .125;
-    //     rotate: 45deg;
-    //     z-index: -1;
-    // }
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 60% 1fr; 
+        // grid-template-rows: 1fr 1fr; 
+        // grid-template-rows: 60% auto; 
+        grid-template-areas: 'image-1 image-2' 
+                                ' content content ';
 
-    @include abstracts.lg {
+    @include abstracts.md {
         padding: 30vh 5vw 0;
+        padding: 10vh 5vw 1rem;
         // border: 2px solid red;/
         display: grid;
-        gap: 1rem;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr; 
+        grid-template-rows: 60% 1fr; 
+    background-color: abstracts.$background-main;
+
+        // column-gap: 1rem;
         // align-items: center;
-        grid-template-areas: 'content image';
+        // grid-template-areas: 'image-1 . image-2'
+        //                         'image-1 content image-2';
+        grid-template-areas: 'image-1 image-2'
+                                ' content content ';
     }
 
 }
 
-.hero-img {
-    grid-area: image;
-    position: absolute;
-    top: 0;
-    border: 2px solid blue;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    clip-path: polygon(100% 0, 0% 0%, 100% 100%);
 
-    // display: block;
-    // margin: 0 auto 5vh;
-    // width: 100%;
-    // height: 40vh;
-    // max-height: 450px;
-    
-    border-radius: abstracts.$border-radius-md;
-    overflow: hidden;
-    // position: relative; 
 
-    @include abstracts.md {
-        position: relative;
-        height: 50vh;
-        clip-path: unset;
-    }
+
+.hero-img-1 {
+    grid-area: image-1;
+    // position: absolute;
+    // top: 0;
+    // border: 2px solid blue;
+    // overflow: hidden;
+    // max-width: 100%;
+    // height: 100%;
+    // z-index: -1;
+    // clip-path: polygon(100% 0, 0% 0%, 100% 100%);
+
+    overflow: hidden;
+
 
 
     img {
-        object-fit: cover;
-        object-position: 20% center;
-        width: 100%;
-        height: 100%;
+        // object-fit: cover;
+        // object-position: 20% center;
+        // width: 100%;
+        // height: 100%;
     }
 
     // @include abstracts.md {
@@ -87,31 +80,97 @@
 
 }
 
+.hero-img-2 {
+    grid-area: image-2;
+    // border: 2px solid blue;
+    // display: none;
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // right: 0;
+    // overflow: hidden;
+    // width: 100%;
+    // height: 100%;
+    // z-index: -2;
+    // clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    // clip-path: polygon(0 0, 0% 100%, 100% 0);
+
+    img {
+        // object-fit: cover;
+        // object-position: 80% center;
+        // height: 100%;
+        // width: 400px;
+
+    }
+
+
+    // @include abstracts.md {
+    //     position: relative;
+    //     // height: 50vh;
+    //     clip-path: unset;
+    // }
+    // z-index: -1;
+    // clip-path: polygon(100% 0, 0% 50%, 100% 100%);
+}
+
+
+.hero-img {
+    @include abstracts.md {
+        position: relative;
+        clip-path: unset;
+
+    }
+
+    img {
+        // opacity: .2;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+}
+
 .hero-content {
+    // display: none;
     grid-area: content;
-    padding: 10vh 0vw 1rem;
-    padding: 1rem;
-    border-radius: .25rem;
-    top: 40vh;
-    position: relative;
-    border: 1px solid abstracts.$text-link;
+    // padding: 10vh 0vw 1rem;
+    padding: 1rem 1rem 1rem;
+    // border-radius: .25rem;
+    // top: 50vh;
+    // position: relative;
+    // border: 1px solid abstracts.$text-link;
     text-align: left;
-    background-color: abstracts.$background-main-trans;
+    text-align: center;
+    background-color: abstracts.$background-main;
+    // box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.250);
 
     @include abstracts.md {
         top: unset;
     }
     
     @include abstracts.lg {
-        padding: 0;
-        text-align: left;
+        // padding: 0;
+        // text-align: left;
         // align-self: flex-start;
     }
     
     .hero-title {
         // margin-bottom: 1rem;
-        max-width: 800px;
-        margin-inline: auto;
+        // max-width: 800px;
+        // margin-inline: auto;
+        // border: 2px solid abstracts.$text-link;
+        background-color: abstracts.$background-main-dark;
+        padding: 1rem;
+        border-radius: .25rem;
+        box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.250);
+
+
+        @include abstracts.md {
+            padding: 1rem;
+            box-shadow: none;
+            background-color: transparent;
+        }
         
 
         h1 {
@@ -172,37 +231,35 @@
         justify-content: start;
     }
 
-    a {
-        color: abstracts.$text-light;
-        // color: #C3A356;
-        background: abstracts.$cta-btn;
-        background: #c3a356;
-        background: #D15F33;
-        background: linear-gradient(hsl(17, 63%, 59%), #D15F33);
+    
+}
 
-        width: max-content;
-        padding: 0.5rem 2rem;
-        border-radius: 0.5rem;
-        
-        font-size: abstracts.$font-clamp-sm;
-        font-weight: 600;
-        text-decoration: none;
-        text-transform: capitalize;
-        letter-spacing: .15rem;
-        
-        // &::before {
-        //     background: linear-gradient(0deg, abstracts.$overlay-blue-darkest,
-        //                                     abstracts.$overlay-blue-dark, 
-        //                                     abstracts.$overlay-blue-darkest);
-        
-        // }
+.btn-main {
+    display: block;
+    color: abstracts.$text-light;
+    // color: #C3A356;
+    background: abstracts.$cta-btn;
+    background: #c3a356;
+    background: #D15F33;
+    background: linear-gradient(hsl(17, 63%, 59%), #D15F33);
+    
+    width: max-content;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0 0;
+    margin: 1rem auto 0;
+    border-radius: 0.5rem;
+    
+    font-size: abstracts.$font-clamp-sm;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: .15rem;
+    
 
-        &:hover, &:focus {
-        color: abstracts.$text-brand;
+    &:hover, &:focus {
+    color: abstracts.$text-brand;
 
-    }
-
-    }
+}
 
 }
 
