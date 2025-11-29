@@ -38,5 +38,9 @@
         // height: 100%;
         // object-fit: cover;
         // object-position: center;
+        transition: 250ms ease;
+        &:hover {
+            scale: 1.05;
+        }
     }
 }
