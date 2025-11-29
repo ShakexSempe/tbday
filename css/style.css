@@ -711,11 +711,16 @@ form #submit-btn:active .icon {
 }
 .hero-img-1 {
   grid-area: image-1;
+  border-right: 2px solid #D15F33;
   overflow: hidden;
 }
 
 .hero-img-2 {
   grid-area: image-2;
+}
+
+.hero-img {
+  border-bottom: 2px solid green;
 }
 
 @media (min-width: 768px) {
@@ -734,6 +739,7 @@ form #submit-btn:active .icon {
 .hero-content {
   grid-area: content;
   padding: 1rem 1rem 1rem;
+  padding: 1rem 5vw 1rem;
   text-align: left;
   text-align: center;
   background-color: #c3c3b1;
