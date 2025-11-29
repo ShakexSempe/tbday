@@ -163,9 +163,9 @@
   font-display: swap;
 }
 .gallery {
-  border: 2px solid #000;
+  background: #d9d9ce;
   max-width: 100%;
-  padding: 0.5rem;
+  padding: 10vh 5vw;
 }
 
 .gallery .grid-container {
@@ -659,6 +659,7 @@ form #submit-btn {
 }
 form #submit-btn.btn-bg {
   background: #5f0315;
+  background: #D15F33;
 }
 
 form #submit-btn.btn-bg::before {
@@ -687,8 +688,8 @@ form #submit-btn:active .icon {
   background-color: #746A49;
   position: relative;
   color: #4F352C;
-  height: 100dvh;
   height: 95vh;
+  height: 95dvh;
   isolation: isolate;
   text-align: center;
   display: grid;
@@ -719,10 +720,6 @@ form #submit-btn:active .icon {
   grid-area: image-2;
 }
 
-.hero-img {
-  border-bottom: 2px solid green;
-}
-
 @media (min-width: 768px) {
   .hero-img {
     position: relative;
@@ -738,8 +735,7 @@ form #submit-btn:active .icon {
 
 .hero-content {
   grid-area: content;
-  padding: 1rem 1rem 1rem;
-  padding: 1rem 5vw 1rem;
+  padding: 5vh 5vw 5vh;
   text-align: left;
   text-align: center;
   background-color: #c3c3b1;
@@ -754,7 +750,7 @@ form #submit-btn:active .icon {
   background-color: #d9d9ce;
   padding: 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 768px) {
@@ -1005,7 +1001,7 @@ form #submit-btn:active .icon {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-padding-top: 10vh;
+  scroll-padding-top: 5vh;
   font-style: italic;
 }
 

@@ -9,9 +9,8 @@
 
     color: abstracts.$text-brand;
 
-    // width: 90vw;
-    height: 100dvh;
     height: 95vh;
+    height: 95dvh;
     // padding: 10vh 5vw 5vh;
     
     // overflow: hidden;
@@ -116,7 +115,7 @@
 
 
 .hero-img {
-    border-bottom: 2px solid green;
+    // border-bottom: 2px solid green;
     @include abstracts.md {
         position: relative;
         clip-path: unset;
@@ -137,8 +136,7 @@
     // display: none;
     grid-area: content;
     // padding: 10vh 0vw 1rem;
-    padding: 1rem 1rem 1rem;
-    padding: 1rem 5vw 1rem;
+    padding: 5vh 5vw 5vh;
     // border-radius: .25rem;
     // top: 50vh;
     // position: relative;
@@ -166,7 +164,7 @@
         background-color: abstracts.$background-main-dark;
         padding: 1rem;
         border-radius: .25rem;
-        box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.250);
+        box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.150);
 
 
         @include abstracts.md {
