@@ -171,7 +171,6 @@
 .gallery .grid-container {
   display: grid;
   overflow: hidden;
-  grid-auto-rows: 240px;
   grid-template-columns: auto auto;
   background-color: #ddd;
 }
@@ -685,27 +684,28 @@ form #submit-btn:active .icon {
 .hero {
   background-color: #efefeb;
   background-color: #c3c3b1;
-  background-color: #746A49;
   position: relative;
   color: #4F352C;
-  height: 95vh;
   height: 95dvh;
+  height: 95vh;
+  padding: 10vh 5vw 5vh;
+  padding: 5vh 0;
+  overflow: hidden;
   isolation: isolate;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 60% 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas: "image-1 image-2" " content content ";
 }
 
 @media (min-width: 768px) {
   .hero {
     padding: 30vh 5vw 0;
-    padding: 10vh 5vw 1rem;
+    padding: 10vh 5vw 5vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-rows: 60% 1fr;
     background-color: #c3c3b1;
     grid-template-areas: "image-1 image-2" " content content ";
   }
@@ -718,6 +718,10 @@ form #submit-btn:active .icon {
 
 .hero-img-2 {
   grid-area: image-2;
+}
+
+.hero-img {
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -735,10 +739,10 @@ form #submit-btn:active .icon {
 
 .hero-content {
   grid-area: content;
-  padding: 5vh 5vw 5vh;
-  text-align: left;
-  text-align: center;
   background-color: #c3c3b1;
+  padding: 5vh 5vw 5vh;
+  text-align: center;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -763,7 +767,7 @@ form #submit-btn:active .icon {
 .hero-content .hero-title h1 {
   text-transform: capitalize;
   font-size: clamp(1.5rem, 5vw, 2rem);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
 }
 
 .hero-content .hero-title h1 span {

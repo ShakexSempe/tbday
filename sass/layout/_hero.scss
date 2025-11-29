@@ -4,35 +4,32 @@
     // border: 2px solid green;
     background-color: abstracts.$background-gray;
     background-color: abstracts.$background-main;
-    background-color: abstracts.$background-navbar;
     position: relative;
 
     color: abstracts.$text-brand;
 
-    height: 95vh;
     height: 95dvh;
-    // padding: 10vh 5vw 5vh;
+    height: 95vh;
+    padding: 10vh 5vw 5vh;
+    padding: 5vh 0;
     
-    // overflow: hidden;
+    overflow: hidden;
     isolation: isolate;
     text-align: center;
 
     display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 60% 1fr; 
-        // grid-template-rows: 1fr 1fr; 
-        // grid-template-rows: 60% auto; 
+        grid-template-rows: 1fr 1fr;  
         grid-template-areas: 'image-1 image-2' 
                                 ' content content ';
 
     @include abstracts.md {
         padding: 30vh 5vw 0;
-        padding: 10vh 5vw 1rem;
+        padding: 10vh 5vw 5vh;
         // border: 2px solid red;/
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr; 
-        grid-template-rows: 60% 1fr; 
     background-color: abstracts.$background-main;
 
         // column-gap: 1rem;
@@ -115,7 +112,7 @@
 
 
 .hero-img {
-    // border-bottom: 2px solid green;
+    overflow: hidden;
     @include abstracts.md {
         position: relative;
         clip-path: unset;
@@ -123,7 +120,6 @@
     }
 
     img {
-        // opacity: .2;
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -133,34 +129,17 @@
 }
 
 .hero-content {
-    // display: none;
     grid-area: content;
-    // padding: 10vh 0vw 1rem;
-    padding: 5vh 5vw 5vh;
-    // border-radius: .25rem;
-    // top: 50vh;
-    // position: relative;
-    // border: 1px solid abstracts.$text-link;
-    text-align: left;
-    text-align: center;
     background-color: abstracts.$background-main;
-    // box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.250);
+    padding: 5vh 5vw 5vh;
+    text-align: center;
+    overflow: hidden;
 
     @include abstracts.md {
         top: unset;
     }
     
-    @include abstracts.lg {
-        // padding: 0;
-        // text-align: left;
-        // align-self: flex-start;
-    }
-    
     .hero-title {
-        // margin-bottom: 1rem;
-        // max-width: 800px;
-        // margin-inline: auto;
-        // border: 2px solid abstracts.$text-link;
         background-color: abstracts.$background-main-dark;
         padding: 1rem;
         border-radius: .25rem;
@@ -177,7 +156,7 @@
         h1 {
             text-transform: capitalize;
             font-size: abstracts.$font-clamp-lg;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0rem;
 
             span {
                 color: abstracts.$span-crimson;
