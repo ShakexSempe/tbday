@@ -17,6 +17,11 @@
         gap: 0.25rem;
         background-color: #ddd;
 
+        @include abstracts.md {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+        }
+
         &:has(:hover){
         img {
             &:not(:hover){

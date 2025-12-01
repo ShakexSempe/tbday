@@ -27,10 +27,3 @@ navItem.forEach(item => {
 
     })
 });
-
-// info btn 
-infoBtn.forEach(btn => {
-    btn.addEventListener("click", () => {
-        infoSection.classList.toggle("active");
-    })
-})

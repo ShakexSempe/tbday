@@ -49,21 +49,42 @@
         .hero-img-1 {
             border-right: none;
             border-bottom: 2px solid abstracts.$text-link;
-            margin-inline: auto;
-            img {
+            // margin-inline: auto;
 
+            @include abstracts.md {
+                    display: block;
+                    // margin-inline: 0;
+                }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-position: center top;
+                max-width: 600px;
+                margin-inline: auto;
             }
+            
         }
+
         .hero-img-2 {
             display: none;
-        }
+            @include abstracts.md {
+                display: block;
+            }
 
+        }
+        
         @include abstracts.md {
             // grid-template-areas: 'image-';
-            .hero-img {
-                border: 3px solid red;
-                width: 700px;
-            }
+            display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'image-1 image-2'
+                                ' content content ';
+            // .hero-img {
+            //     border: 3px solid red;
+            //     // width: 700px;
+            // }
         }
     }
 }
