@@ -178,6 +178,10 @@
   background-color: #ddd;
 }
 
+.gallery .grid-container:has(:hover) img:not(:hover) {
+  opacity: 0.8;
+}
+
 .gallery .image-container {
   margin: 10vh auto;
   display: grid;
@@ -191,7 +195,7 @@
 }
 
 .gallery img:hover {
-  scale: 1.05;
+  scale: 1.025;
 }
 
 footer {

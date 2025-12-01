@@ -16,6 +16,14 @@
         grid-template-columns: auto auto;
         gap: 0.25rem;
         background-color: #ddd;
+
+        &:has(:hover){
+        img {
+            &:not(:hover){
+                opacity: .8;
+            }
+        }
+    }
     }
 
     .image-container {
@@ -40,7 +48,13 @@
         // object-position: center;
         transition: 250ms ease;
         &:hover {
-            scale: 1.05;
+            scale: 1.025;
         }
+
+
+        
     }
+
+    
+
 }
