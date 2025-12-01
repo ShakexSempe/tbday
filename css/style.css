@@ -729,6 +729,28 @@ form #submit-btn:active .icon {
     grid-template-areas: "image-1 image-2" " content content ";
   }
 }
+.hero.about-hero {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "image-1" "content";
+}
+
+.hero.about-hero .hero-img-1 {
+  border-right: none;
+  border-bottom: 2px solid #D15F33;
+  margin-inline: auto;
+}
+
+.hero.about-hero .hero-img-2 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hero.about-hero .hero-img {
+    border: 3px solid red;
+    width: 700px;
+  }
+}
 .hero-img-1 {
   grid-area: image-1;
   border-right: 2px solid #D15F33;

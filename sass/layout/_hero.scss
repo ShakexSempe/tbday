@@ -40,6 +40,32 @@
                                 ' content content ';
     }
 
+
+    &.about-hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'image-1' 'content';
+
+        .hero-img-1 {
+            border-right: none;
+            border-bottom: 2px solid abstracts.$text-link;
+            margin-inline: auto;
+            img {
+
+            }
+        }
+        .hero-img-2 {
+            display: none;
+        }
+
+        @include abstracts.md {
+            // grid-template-areas: 'image-';
+            .hero-img {
+                border: 3px solid red;
+                width: 700px;
+            }
+        }
+    }
 }
 
 
