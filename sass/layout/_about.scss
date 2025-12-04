@@ -9,9 +9,10 @@
     .grid-container {
         // border: 2px solid blue;
         background-color: #ddd;
-        
+
         display: grid;
         grid-auto-rows: auto;
+        grid-auto-rows: 300px;
         grid-template-columns: auto auto;
         gap: 0.25rem;
         overflow: hidden;
@@ -19,6 +20,11 @@
         @include abstracts.md {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
         }
 
         &:has(:hover){

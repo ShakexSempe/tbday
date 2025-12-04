@@ -172,6 +172,7 @@
   background-color: #ddd;
   display: grid;
   grid-auto-rows: auto;
+  grid-auto-rows: 300px;
   grid-template-columns: auto auto;
   gap: 0.25rem;
   overflow: hidden;
@@ -182,6 +183,11 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
+.gallery .grid-container img {
+  height: 100%;
+  width: 100%;
+}
+
 .gallery .grid-container:has(:hover) img:not(:hover) {
   opacity: 0.8;
 }
