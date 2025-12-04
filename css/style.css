@@ -172,7 +172,6 @@
   background-color: #ddd;
   display: grid;
   grid-auto-rows: auto;
-  grid-auto-rows: 300px;
   grid-template-columns: auto auto;
   gap: 0.25rem;
   overflow: hidden;
@@ -186,6 +185,8 @@
 .gallery .grid-container img {
   height: 100%;
   width: 100%;
+  object-fit: contain;
+  object-position: top;
 }
 
 .gallery .grid-container:has(:hover) img:not(:hover) {
