@@ -62,7 +62,7 @@
   right: 0.25rem;
   width: 1rem;
   height: 1rem;
-  border: 3px solid #D15F33;
+  border: 3px solid #d16033;
   border-right-color: #0001;
   border-bottom-color: #0001;
   rotate: 45deg;
@@ -143,7 +143,7 @@
   right: 0.25rem;
   width: 1rem;
   height: 1rem;
-  border: 3px solid #D15F33;
+  border: 3px solid #d16033;
   border-right-color: #0001;
   border-bottom-color: #0001;
   rotate: 45deg;
@@ -207,7 +207,7 @@
 
 .gallery .image-container img:hover {
   scale: 1.025;
-  border-color: #D15F33;
+  border-color: #d16033;
 }
 
 .gallery .row-container {
@@ -267,7 +267,7 @@ footer p {
 }
 
 footer a {
-  color: #D15F33;
+  color: #d16033;
   text-decoration: none;
   position: relative;
 }
@@ -666,6 +666,7 @@ form .input-div textarea {
 
 form .input-div ::placeholder {
   color: #a3a3a3;
+  color: #3d3d3d;
   text-transform: capitalize;
   opacity: 0.5;
 }
@@ -770,7 +771,7 @@ form #submit-btn:active .icon {
 
 .hero.about-hero .hero-img-1 {
   border-right: none;
-  border-bottom: 2px solid #D15F33;
+  border-bottom: 2px solid #d16033;
 }
 
 @media (min-width: 768px) {
@@ -803,9 +804,13 @@ form #submit-btn:active .icon {
     grid-template-areas: "image-1 image-2" " content content ";
   }
 }
+.hero-img {
+  border-bottom: 2px solid #186818;
+}
+
 .hero-img-1 {
   grid-area: image-1;
-  border-right: 2px solid #D15F33;
+  border-right: 2px solid #d16033;
   overflow: hidden;
 }
 
@@ -992,7 +997,7 @@ form #submit-btn:active .icon {
   right: 0.25rem;
   width: 1rem;
   height: 1rem;
-  border: 3px solid #D15F33;
+  border: 3px solid #d16033;
   border-right-color: #0001;
   border-bottom-color: #0001;
   rotate: 45deg;

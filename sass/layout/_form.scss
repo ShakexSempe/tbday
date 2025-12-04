@@ -153,6 +153,7 @@ form {
 
         ::placeholder {
             color: hsl(0, 0%, 64%);
+            color: abstracts.$text-placeholder;
             // color: abstracts.$text-light-trans;
             text-transform: capitalize;
             opacity: .5;
