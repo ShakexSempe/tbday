@@ -205,15 +205,29 @@
   border: 1px solid transparent;
 }
 
+.gallery .image-container img:hover {
+  scale: 1.025;
+  border-color: #D15F33;
+}
+
+.gallery .row-container {
+  height: 350px;
+  overflow-y: hidden;
+  padding: 0.25rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.gallery .row-container img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .gallery img {
   border-radius: 0.25rem;
   object-fit: cover;
   transition: 250ms ease;
-}
-
-.gallery img:hover {
-  scale: 1.025;
-  border-color: #D15F33;
 }
 
 footer {

@@ -49,8 +49,31 @@
         img {
             height: 100%;
             border: 1px solid transparent;
+            
+            &:hover {
+                scale: 1.025;
+                border-color: abstracts.$text-link;
+            }
+
         }
 
+
+    }
+
+    .row-container {
+        // border: 2px solid red;
+        height: 350px;
+        overflow-y: hidden;
+        padding: 0.25rem;
+
+        display: flex;
+        gap: .5rem;
+
+        img {
+            width: 80%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     img {
@@ -58,10 +81,7 @@
         object-fit: cover;
         transition: 250ms ease;
 
-        &:hover {
-            scale: 1.025;
-            border-color: abstracts.$text-link;
-        }
+        
         
     }
 
