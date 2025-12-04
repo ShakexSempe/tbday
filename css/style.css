@@ -169,13 +169,12 @@
 }
 
 .gallery .grid-container {
+  background-color: #ddd;
   display: grid;
-  overflow: hidden;
-  grid-auto-rows: auto;
   grid-auto-rows: auto;
   grid-template-columns: auto auto;
   gap: 0.25rem;
-  background-color: #ddd;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -194,13 +193,20 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+.gallery .image-container img {
+  height: 100%;
+  border: 1px solid transparent;
+}
+
 .gallery img {
   border-radius: 0.25rem;
+  object-fit: cover;
   transition: 250ms ease;
 }
 
 .gallery img:hover {
   scale: 1.025;
+  border-color: #D15F33;
 }
 
 footer {
@@ -544,6 +550,8 @@ form fieldset {
   background-color: #fafafa;
   border-radius: 0.5rem;
   border: 1px solid #746A49;
+  border: 1px solid #0002;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transition: 500ms;
   position: relative;
   isolation: isolate;
@@ -599,7 +607,7 @@ form .input-div {
 }
 
 form .input-div label {
-  transform: translateY(-0.5em);
+  transform: translateY(-0.25em);
   text-transform: capitalize;
   transition: 0.2s;
   font-weight: 600;
@@ -630,11 +638,6 @@ form .input-div textarea:focus {
   outline: 1px dashed lime;
 }
 
-form .input-div input:invalid,
-form .input-div textarea:invalid {
-  outline: 1px dashed #D15F33;
-}
-
 form .input-div textarea {
   padding: 0.5em;
   font-size: 1.2em;
@@ -651,7 +654,7 @@ form .input-div.services input {
 }
 
 form .input-div:hover label {
-  transform: translateY(0) translateX(0.5em);
+  transform: translateY(-0.25em) translateX(0.5rem);
 }
 
 form #submit-btn {

@@ -25,7 +25,8 @@ form {
         background-color: #fafafa;
         border-radius: abstracts.$border-radius-md;
         border: 1px solid abstracts.$background-navbar;
-        
+        border: 1px solid #0002;
+        box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.150);
         transition: 500ms;
         position: relative;
         isolation: isolate;
@@ -94,7 +95,7 @@ form {
 
         label {
             // border: 1px solid green;
-            transform: translateY(-.5em);
+            transform: translateY(-.25em);
             text-transform: capitalize;
             transition: .2s;
             font-weight: 600;
@@ -137,7 +138,7 @@ form {
                 // background-color: #161616;
                 // color: abstracts.$text-light;
                 // border: none;
-                outline: 1px dashed abstracts.$text-link;
+                // outline: 1px dashed abstracts.$text-link;
             }
         }
 
@@ -167,7 +168,7 @@ form {
         // input hover state
         &:hover {
             label {
-                transform: translateY(0) translateX(.5em);
+                transform: translateY(-.25em) translateX(0.5rem);
             }
         }
     }

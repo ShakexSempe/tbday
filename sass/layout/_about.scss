@@ -8,15 +8,14 @@
     
     .grid-container {
         // border: 2px solid blue;
+        background-color: #ddd;
+        
         display: grid;
-        overflow: hidden;
-        // grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        grid-auto-rows: auto;
         grid-auto-rows: auto;
         grid-template-columns: auto auto;
         gap: 0.25rem;
-        background-color: #ddd;
-
+        overflow: hidden;
+        
         @include abstracts.md {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
@@ -38,28 +37,23 @@
         gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 
+        img {
+            height: 100%;
+            border: 1px solid transparent;
+        }
 
-        // @include abstracts.md {
-        //     grid-template-columns: repeat(3, 1fr);
-        // }
     }
 
     img {
         border-radius: 0.25rem;
-        // border: 2px solid #000;
-        // width: 100%;
-        // height: 100%;
-        // object-fit: cover;
-        // object-position: center;
+        object-fit: cover;
         transition: 250ms ease;
+
         &:hover {
             scale: 1.025;
+            border-color: abstracts.$text-link;
         }
-
-
         
     }
-
-    
 
 }

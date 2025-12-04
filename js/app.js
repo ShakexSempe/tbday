@@ -21,9 +21,9 @@ toggle.addEventListener("click", () => {
 // nav items 
 navItem.forEach(item => {
     item.addEventListener("click", () => {
-        navList.classList.toggle("active");
-        toggle.classList.toggle("active");
-        body.classList.toggle("dim");
+        navList.classList.remove("active");
+        toggle.classList.remove("active");
+        body.classList.remove("dim");
 
     })
 });

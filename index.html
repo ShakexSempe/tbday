@@ -118,32 +118,42 @@
     
             <form id="form" action="https://formsubmit.co/bshakex@gmail.com" method="POST">
                 
-                <!-- PERSONAL INFO -->
+                <!-- RSVP FORM -->
                 <fieldset title="Personal details" id="personal" class="field ">
                     <legend>RSVP</legend>
-                    <!-- <div class="field-btn"></div> -->
+
                     <div class="input-div">
-                        <label for="first-name">Name: </label>
-                        <input type="text" name="first-name" id="first-name" title="first name and last name"
-                            placeholder="your first and last name" minlength="2" required>
+                        <label for="first-name">Name</label>
+                        <input type="text" name="first-name" id="first-name" title="Your name"
+                            placeholder="your name & partner's name" minlength="2" required>
                     </div>
+
+                    <div class="input-div">
+                        <label for="partner-name">Partner's name </label>
+                        <input type="text" name="partner-name" id="partner-name" title="Partner's name and partner's name"
+                            placeholder="your name & partner's name" minlength="2">
+                    </div>
+
                     <div class="input-div">
                         <label for="tel">phone number </label>
                         <input type="tel" name="tel" id="tel" title="phone number" placeholder="your phone number"
                             minlength="10" required>
                     </div>
+
                     <div class="input-div">
                         <label for="email">email address </label>
                         <input type="email" name="email" title="email address" id="email" placeholder="your email address"
                             required>
                     </div>
-                </fieldset>
 
+                    <!-- SUBMIT BUTTON -->
+                    <button id="submit-btn" class="btn-bg" type="submit">submit rsvp 
+                        <img src="icons/solid/icons8-email-send-48-light.png" height="48" width="48" alt="email sent icon"
+                                    class="icon">
+                    </button>
+
+                </fieldset>
                 
-                <button id="submit-btn" class="btn-bg" type="submit">submit rsvp 
-                    <img src="icons/solid/icons8-email-send-48-light.png" height="48" width="48" alt="email sent icon"
-                class="icon">
-                </button>
 
                 <input type="hidden" name="_autoresponse" value="Your form has been sent to Shakex Sempe">
                 <input type="hidden" name="_template" value="table">
@@ -159,11 +169,11 @@
                 <article>
                 <h2>Party Info</h2>
                 <p>kindly RSVP before December 20, 2025</p>
-                <p><strong>Address:</strong>Philip Sanders Holiday Resort, Bloemfontein </p>
-                <p><strong>time:</strong>14h00 </p>
-                <p><strong>for your attention</strong>  
+                <p><strong>time: </strong>14h00 </p>
+                <p><strong>for your attention: </strong>  
                     <br> ● For anyone who would wish to sleepover, it is recommended that you seek accommodation in Bloemfontein
                     <br> ● The facilities caters to camping/caravans should you wish to camp.</p>
+                    <p><strong>Address: </strong> <a href="https://maps.app.goo.gl/e3vM2YcjzPb8Wq3T6" target="_blank">Philip Sanders Holiday Resort</a>, Bloemfontein </p>
 
                 </article>
 
