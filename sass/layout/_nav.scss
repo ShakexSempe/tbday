@@ -233,6 +233,7 @@
 
 // DETAILS BUTTON
 .details {
+    display: none;
     text-transform: uppercase;
     font-size: abstracts.$font-clamp-xsm;
     text-decoration-color: transparent;
@@ -261,6 +262,7 @@
         place-items: center;
         transition: .3s ease;
         cursor: default;
+        display: none;
 
         .bar {
             position: absolute;

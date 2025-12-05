@@ -470,6 +470,7 @@ footer a {
   }
 }
 .details {
+  display: none;
   text-transform: uppercase;
   font-size: clamp(.95rem, 1.5vw, 1rem);
   text-decoration-color: transparent;
@@ -494,6 +495,7 @@ footer a {
   place-items: center;
   transition: 0.3s ease;
   cursor: default;
+  display: none;
 }
 
 .nav-toggle .bar {
