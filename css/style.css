@@ -470,7 +470,6 @@ footer a {
   }
 }
 .details {
-  display: none;
   text-transform: uppercase;
   font-size: clamp(.95rem, 1.5vw, 1rem);
   text-decoration-color: transparent;
@@ -484,6 +483,8 @@ footer a {
 }
 
 .nav-toggle {
+  display: grid;
+  place-items: center;
   border: 1px solid #4F352C;
   border: 1px solid transparent;
   border-radius: 50%;
@@ -491,11 +492,8 @@ footer a {
   height: 1.5rem;
   position: absolute;
   right: 5vw;
-  display: grid;
-  place-items: center;
   transition: 0.3s ease;
   cursor: default;
-  display: none;
 }
 
 .nav-toggle .bar {

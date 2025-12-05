@@ -233,7 +233,6 @@
 
 // DETAILS BUTTON
 .details {
-    display: none;
     text-transform: uppercase;
     font-size: abstracts.$font-clamp-xsm;
     text-decoration-color: transparent;
@@ -248,6 +247,9 @@
 
  // TOGGLE BUTTON
     .nav-toggle {
+        display: grid;
+        place-items: center;
+
         border: 1px solid abstracts.$brand;
         border: 1px solid transparent;
         border-radius: 50%;
@@ -258,11 +260,8 @@
         position: absolute;
         right: 5vw;
         // padding: 1em;
-        display: grid;
-        place-items: center;
         transition: .3s ease;
         cursor: default;
-        display: none;
 
         .bar {
             position: absolute;
