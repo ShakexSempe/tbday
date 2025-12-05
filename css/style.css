@@ -829,6 +829,7 @@ form #submit-btn:active .icon {
   .hero-img {
     border: none;
     border-radius: 0.25rem;
+    max-height: 500px;
   }
 }
 .hero-img-1 {
