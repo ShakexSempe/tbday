@@ -229,22 +229,7 @@
 
 }
 
-.hero-cta-btns {
-    width: 100%;
-    margin: 1.5rem auto 0;
 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-    @include abstracts.lg {
-        margin: 1rem 0;
-        justify-content: start;
-    }
-
-    
-}
 
 .btn-main {
     display: block;
@@ -265,6 +250,7 @@
     font-weight: 600;
     text-decoration: none;
     text-transform: capitalize;
+    text-transform: uppercase;
     letter-spacing: .15rem;
     
 
